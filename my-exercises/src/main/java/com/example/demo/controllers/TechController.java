@@ -4,6 +4,7 @@ import com.example.demo.models.TechModel;
 import com.example.demo.services.TechService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -14,6 +15,7 @@ public class TechController {
 
     @Autowired
     private TechService techService;
+
 
     @PostMapping(value = "/create")
     public ResponseEntity<TechModel> createTech(@RequestBody TechModel techModel) {
